@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{3E476494-44C7-458D-B5BD-77709BF9D6F3}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Servidor\Servidor.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Cliente\BeSoftOperacional.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Servidor">
+        <MSBuild Projects="Servidor\Servidor.dproj"/>
+    </Target>
+    <Target Name="Servidor:Clean">
+        <MSBuild Projects="Servidor\Servidor.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Servidor:Make">
+        <MSBuild Projects="Servidor\Servidor.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="BeSoftOperacional">
+        <MSBuild Projects="Cliente\BeSoftOperacional.dproj"/>
+    </Target>
+    <Target Name="BeSoftOperacional:Clean">
+        <MSBuild Projects="Cliente\BeSoftOperacional.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="BeSoftOperacional:Make">
+        <MSBuild Projects="Cliente\BeSoftOperacional.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Servidor;BeSoftOperacional"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Servidor:Clean;BeSoftOperacional:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Servidor:Make;BeSoftOperacional:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
