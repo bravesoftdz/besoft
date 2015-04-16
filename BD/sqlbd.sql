@@ -11,8 +11,8 @@
 			tp_status char(1) not null,
 			tp_pessoa_jf char(1) not null,
 			cd_endereco numeric(3) not null,
-			email_envio varchar(300);
-			email_nfe varchar(60);
+			email_envio varchar(300),
+			email_nfe varchar(60),
 			cd_pessoafiscalicms numeric(3) not null,
 			cd_pessoafiscalipi numeric(3) not null,
 			cd_pessoafiscalpis numeric(3) not null,
@@ -51,7 +51,7 @@
 		);
 
 		-- ESTADO
-		CREATE OR REPLACE TABLE estado (
+		CREATE TABLE estado (
 			cd_uf numeric(2) not null,
 			ds_uf char(2) not null,
 			cd_pais numeric(4) not null,
