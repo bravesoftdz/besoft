@@ -43,6 +43,8 @@ object OpPrincipal: TOpPrincipal
     Align = alClient
     Style = tsFlatButtons
     TabOrder = 1
+    ExplicitLeft = -64
+    ExplicitTop = 344
   end
   object mmOpPrincipal: TMainMenu
     Left = 800

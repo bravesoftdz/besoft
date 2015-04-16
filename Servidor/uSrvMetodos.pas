@@ -8,7 +8,8 @@ uses System.SysUtils, System.Classes, System.Json,
   FireDAC.Stan.Error, FireDAC.Phys.Intf, FireDAC.Stan.Def, FireDAC.Stan.Pool,
   FireDAC.Stan.Async, FireDAC.Phys, FireDAC.Phys.PG, Data.DB,
   FireDAC.Comp.Client, FireDAC.Comp.UI, FireDAC.Stan.Param, FireDAC.DatS,
-  FireDAC.DApt.Intf, FireDAC.DApt, Datasnap.Provider, FireDAC.Comp.DataSet;
+  FireDAC.DApt.Intf, FireDAC.DApt, Datasnap.Provider, FireDAC.Comp.DataSet,
+  FireDAC.Phys.PGDef;
 
 type
   TSM_ServerMetodos = class(TDSServerModule)

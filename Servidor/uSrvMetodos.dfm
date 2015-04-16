@@ -18,13 +18,11 @@ object SM_ServerMetodos: TSM_ServerMetodos
       'Password=postgres'
       'Server=localhost'
       'DriverID=PG')
-    Connected = True
     LoginPrompt = False
     Left = 32
     Top = 160
   end
   object qryPessoa: TFDQuery
-    Active = True
     Connection = fdConexao
     SQL.Strings = (
       'select * from pessoa')
@@ -129,7 +127,6 @@ object SM_ServerMetodos: TSM_ServerMetodos
     Top = 160
   end
   object qryPessoaEndereco: TFDQuery
-    Active = True
     Connection = fdConexao
     SQL.Strings = (
       'select pe.cd_pessoa,'

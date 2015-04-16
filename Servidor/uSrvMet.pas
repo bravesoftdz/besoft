@@ -15,7 +15,7 @@ uses System.SysUtils, System.Classes,
   FireDAC.Phys.Intf, FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async,
   FireDAC.Phys, FireDAC.Phys.PG, Data.DB, FireDAC.Comp.Client, Datasnap.Provider,
   FireDAC.Stan.Param, FireDAC.DatS, FireDAC.DApt.Intf, FireDAC.DApt,
-  FireDAC.Comp.DataSet;
+  FireDAC.Comp.DataSet, FireDAC.Phys.PGDef;
 
 type
   TSC_SvrMet = class(TDataModule)
@@ -26,6 +26,7 @@ type
     DS_ProxyGenerator: TDSProxyGenerator;
     DS_DataProvider: TDSServerMetaDataProvider;
     DS_ServerClass: TDSServerClass;
+    FDPhysPgDriverLink: TFDPhysPgDriverLink;
     procedure DS_ServerClassGetClass(DSServerClass: TDSServerClass;
       var PersistentClass: TPersistentClass);
   private

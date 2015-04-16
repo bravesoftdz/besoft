@@ -33,7 +33,6 @@ object dm_Operacional: Tdm_Operacional
     Top = 72
   end
   object cdsPessoa: TClientDataSet
-    Active = True
     Aggregates = <>
     Params = <>
     ProviderName = 'dspPessoa'
@@ -134,7 +133,6 @@ object dm_Operacional: Tdm_Operacional
     end
   end
   object cdsPessoaEndereco: TClientDataSet
-    Active = True
     Aggregates = <>
     IndexFieldNames = 'cd_pessoa;cd_endereco'
     MasterFields = 'cd_pessoa;cd_endereco'

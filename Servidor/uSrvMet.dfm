@@ -55,4 +55,10 @@ object SC_SvrMet: TSC_SvrMet
     Left = 328
     Top = 16
   end
+  object FDPhysPgDriverLink: TFDPhysPgDriverLink
+    VendorHome = 'C:\Program Files (x86)\PostgreSQL\9.3'
+    VendorLib = 'C:\Program Files (x86)\PostgreSQL\9.3\lib\libpq.dll'
+    Left = 256
+    Top = 72
+  end
 end
